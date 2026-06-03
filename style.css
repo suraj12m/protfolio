@@ -16,7 +16,6 @@ body {
 
     flex-direction: column;
 
-    overflow: hidden;
 
 }
 
@@ -37,7 +36,9 @@ header {
 
     color: white;
 
-    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
 }
 
@@ -118,6 +119,7 @@ main {
     overflow-y: auto;
 
     scroll-behavior: smooth;
+   
 
 }
 
@@ -149,9 +151,7 @@ section {
 
     gap: 30px;
 
-    min-height:
 
-        calc(100vh - 140px);
 
 }
 
@@ -365,7 +365,7 @@ footer {
     padding: 10px;
 
     text-align: center;
-
+    position: sticky;
     font-size: 12px;
 
     font-weight: bold;
