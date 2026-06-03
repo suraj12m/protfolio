@@ -1,2 +1,0 @@
-*Home Section*
-        name,short intro, profile photo, hire me
