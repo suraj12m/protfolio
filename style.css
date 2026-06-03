@@ -7,7 +7,9 @@
 /* BODY */
 
 body {
-    background-color: black;
+
+    background: black;
+
     height: 100vh;
 
     display: flex;
@@ -35,8 +37,6 @@ header {
 
     color: white;
 
-    flex-wrap: wrap;
-
     flex-shrink: 0;
 
 }
@@ -48,6 +48,7 @@ header {
     font-weight: bold;
 
 }
+
 
 /* NAV */
 
@@ -103,6 +104,7 @@ nav a:hover::after {
 
 }
 
+
 /* MAIN */
 
 main {
@@ -115,7 +117,8 @@ main {
 
 }
 
-/* SECTIONS */
+
+/* SECTION */
 
 section {
 
@@ -123,29 +126,31 @@ section {
 
     padding: 25px;
 
-    scroll-margin-top: 15px;
-
 }
 
-/* HERO SECTION */
+
+/* HERO */
+
 #home {
+
     position: relative;
+
     overflow: hidden;
+
     display: flex;
 
     justify-content: space-between;
 
-    align-items: flex-start;
+    align-items: center;
 
-    padding: 30px 70px;
+    padding: 40px 70px;
 
     gap: 50px;
 
-    flex-wrap: wrap;
-
 }
 
-/* Left Side */
+
+/* LEFT */
 
 .left {
 
@@ -153,9 +158,12 @@ section {
 
     min-width: 300px;
 
+    z-index: 2;
+
 }
 
-/* Right Side */
+
+/* RIGHT */
 
 .right {
 
@@ -165,58 +173,85 @@ section {
 
     justify-content: flex-end;
 
+    z-index: 2;
+
 }
 
-/* Profile Image */
+
+/* PROFILE */
 
 .profile {
 
-    width: 350px;
+    width: 380px;
 
     height: auto;
 
-    border-radius: 50%;
+    object-fit: contain;
 
-    object-fit: cover;
-
-    margin-left: 100px;
+    margin: 0;
 
 }
 
-/* Heading */
+
+/* TEXT */
 
 #home h1 {
 
-    font-size: 60px;
+    font-size: 70px;
 
     margin-bottom: 20px;
+
     color: white;
 
 }
 
 #home h2 {
 
-    font-size: 35px;
-
-}
-#home p{
-    font-size: 20px;
-}
-#home h2,#home p {
-
-    color: black;
-    opacity: .1;
-    transition: .5s;
+    font-size: 40px;
 
     margin-bottom: 20px;
 
-}
-#home h2:hover,#home p:hover{
-    color: white;
-    opacity: 1;
+    color: black;
+
+    opacity: .1;
+
+    transition: .5s;
+
 }
 
-/* Typing Animation */
+#home p {
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+
+    color: black;
+
+    opacity: .1;
+
+    transition: .5s;
+
+    line-height: 1.6;
+
+    max-width: 650px;
+
+}
+
+
+/* ORIGINAL HOVER */
+
+#home h2:hover,
+
+#home p:hover {
+
+    color: white;
+
+    opacity: 1;
+
+}
+
+
+/* TYPING */
 
 .typing {
 
@@ -239,8 +274,6 @@ section {
         blink .8s infinite;
 
 }
-
-/* Typing Keyframes */
 
 @keyframes typing {
 
@@ -268,46 +301,23 @@ section {
 
 }
 
-/* Buttons */
+
+/* BUTTONS */
 
 .buttons button {
 
     padding: 12px 20px;
-    margin-top: 13px;
+
+    margin-top: 10px;
+
     margin-right: 10px;
 
     cursor: pointer;
 
 }
 
-/* Responsive */
 
-@media (max-width:768px) {
-
-    #home {
-
-        flex-direction: column-reverse;
-
-        text-align: center;
-
-    }
-
-    #home h1 {
-
-        font-size: 40px;
-
-    }
-
-    .profile {
-
-        width: 200px;
-
-        height: 200px;
-
-    }
-
-}
-
+/* BG EFFECT */
 
 .bg-circle {
 
@@ -331,8 +341,6 @@ section {
 
     transform: translate(-50%, -50%);
 
-    transition: .3s;
-
     pointer-events: none;
 
 }
@@ -352,21 +360,24 @@ footer {
 
     font-size: 12px;
 
-    font-weight: 900;
+    font-weight: bold;
 
     flex-shrink: 0;
 
 }
 
-/* RESPONSIVE */
 
-@media (max-width:768px) {
+/* MOBILE */
+
+@media(max-width:768px) {
 
     header {
 
         flex-direction: column;
 
         gap: 20px;
+
+        padding: 20px;
 
     }
 
@@ -376,15 +387,51 @@ footer {
 
     }
 
+    #home {
+
+        flex-direction: column-reverse;
+
+        justify-content: center;
+
+        align-items: center;
+
+        text-align: center;
+
+        padding: 30px 20px;
+
+    }
+
+    .left {
+
+        width: 100%;
+
+        min-width: auto;
+
+    }
+
+    .right {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+    .profile {
+
+        width: 220px;
+
+    }
+
     #home h1 {
 
-        font-size: 35px;
+        font-size: 55px;
 
     }
 
     #home h2 {
 
-        font-size: 24px;
+        font-size: 30px;
 
     }
 
@@ -392,13 +439,7 @@ footer {
 
         font-size: 18px;
 
-    }
-
-    .profile {
-
-        width: 140px;
-
-        height: 140px;
+        max-width: 100%;
 
     }
 
