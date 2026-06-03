@@ -10,7 +10,7 @@ body {
 
     background: black;
 
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
 
@@ -92,7 +92,9 @@ nav a::after {
 
     bottom: -5px;
 
-    transform: translateX(-50%) scaleX(0);
+    transform:
+
+        translateX(-50%) scaleX(0);
 
     transition: .3s;
 
@@ -100,7 +102,9 @@ nav a::after {
 
 nav a:hover::after {
 
-    transform: translateX(-50%) scaleX(1);
+    transform:
+
+        translateX(-50%) scaleX(1);
 
 }
 
@@ -122,8 +126,6 @@ main {
 
 section {
 
-    min-height: 100vh;
-
     padding: 25px;
 
 }
@@ -143,9 +145,13 @@ section {
 
     align-items: center;
 
-    padding: 40px 70px;
+    padding: 20px 70px;
 
-    gap: 50px;
+    gap: 30px;
+
+    min-height:
+
+        calc(100vh - 140px);
 
 }
 
@@ -178,11 +184,11 @@ section {
 }
 
 
-/* PROFILE */
+/* IMAGE */
 
 .profile {
 
-    width: 380px;
+    width: 300px;
 
     height: auto;
 
@@ -197,9 +203,9 @@ section {
 
 #home h1 {
 
-    font-size: 70px;
+    font-size: 60px;
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     color: white;
 
@@ -207,9 +213,9 @@ section {
 
 #home h2 {
 
-    font-size: 40px;
+    font-size: 35px;
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     color: black;
 
@@ -221,9 +227,13 @@ section {
 
 #home p {
 
-    font-size: 20px;
+    font-size: 18px;
 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+
+    line-height: 1.6;
+
+    max-width: 600px;
 
     color: black;
 
@@ -231,14 +241,10 @@ section {
 
     transition: .5s;
 
-    line-height: 1.6;
-
-    max-width: 650px;
-
 }
 
 
-/* ORIGINAL HOVER */
+/* HOVER EFFECT */
 
 #home h2:hover,
 
@@ -308,7 +314,7 @@ section {
 
     padding: 12px 20px;
 
-    margin-top: 10px;
+    margin-top: 5px;
 
     margin-right: 10px;
 
@@ -317,7 +323,7 @@ section {
 }
 
 
-/* BG EFFECT */
+/* BACKGROUND GLOW */
 
 .bg-circle {
 
@@ -339,7 +345,9 @@ section {
 
     left: 50%;
 
-    transform: translate(-50%, -50%);
+    transform:
+
+        translate(-50%, -50%);
 
     pointer-events: none;
 
@@ -385,6 +393,8 @@ footer {
 
         justify-content: center;
 
+        gap: 25px;
+
     }
 
     #home {
@@ -397,7 +407,9 @@ footer {
 
         text-align: center;
 
-        padding: 30px 20px;
+        padding: 20px;
+
+        min-height: auto;
 
     }
 
@@ -425,13 +437,13 @@ footer {
 
     #home h1 {
 
-        font-size: 55px;
+        font-size: 50px;
 
     }
 
     #home h2 {
 
-        font-size: 30px;
+        font-size: 28px;
 
     }
 
