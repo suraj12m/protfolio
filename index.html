@@ -21,58 +21,56 @@
         </nav>
     </header>
     <main>
-        <div class="bg-circle"></div>
+
         <section id="home">
-            <section id="home">
-               
-                <div class="left">
+            <div class="bg-circle"></div>
+            <div class="left">
 
-                    <h1>
+                <h1>
 
-                        Hi, I'm
+                    Hi, I'm
 
-                        <span class="typing">
+                    <span class="typing">
 
-                            Suraj Mandal
+                        Suraj Mandal
 
-                        </span>
+                    </span>
 
-                    </h1>
+                </h1>
 
-                    <h2>
+                <h2>
 
-                        Student & Developer
+                    Student & Developer
 
-                    </h2>
+                </h2>
 
-                    <p>
+                <p>
 
-                        B.Tech CSE (Cyber Security) student at BIT Sindri 
-                        (Batch 2025) passionate about software development, 
-                        building projects, and exploring technologies to create impactful solutions.
-
+                    B.Tech CSE (Cyber Security) student at BIT Sindri
+                    (Batch 2025) passionate about software development,
+                    building projects, and exploring technologies to create impactful solutions.
 
 
-                    </p>
 
-                    <div class="buttons">
+                </p>
 
-                        <button>Contact Me</button>
+                <div class="buttons">
 
-                        <button>Resume</button>
+                    <button>Contact Me</button>
 
-                    </div>
+                    <button>Resume</button>
 
                 </div>
 
+            </div>
 
-                <div class="right">
 
-                    <img src="images/me.png" class="profile">
+            <div class="right">
 
-                </div>
+                <img src="images/me.png" class="profile">
 
-            </section>
+            </div>
+
             </div>
 
 
@@ -80,7 +78,112 @@
         </section>
 
 
-        <section id="skills">skills</section>
+        <section id="skills">
+            <div class="skill-bg-circle"></div>
+            <div class="skill-bg-circle2"></div>
+
+            <div class="skills-content">
+
+                <div class="left-side">
+
+
+                    <div class="skill-image">
+
+                        <img src="images/hacker.png" alt="">
+
+                    </div>
+
+                </div>
+
+
+                <div class="skills-right">
+                    <h1 class="skill-title">
+                        <span class="skill-typing">
+                            Skills
+                        </span>
+                    </h1>
+
+                    <div class="skill-grid">
+
+                        <div class="skill-box">
+
+                            <img src="images/python.png" class="skill-img">
+
+                        </div>
+
+                        <div class="skill-box">
+
+                            <img src="images/C.png" class="skill-img">
+
+                        </div>
+
+                        <div class="skill-box">
+
+                            <img src="images/css.png" class="skill-img">
+
+                        </div>
+
+                        <div class="skill-box">
+
+                            <img src="images/html.png" class="skill-img">
+
+                        </div>
+
+                        <div class="skill-box">
+
+                            <img src="images/django.png" class="skill-img">
+
+                        </div>
+
+                        <div class="skill-box">
+
+                            <img src="images/flask.png" class="skill-img">
+
+                        </div>
+
+                        <div class="skill-box">
+
+                            <img src="images/git.png" class="skill-img">
+
+                        </div>
+
+                        <div class="skill-box">
+
+                            <img src="images/java.png" class="skill-img">
+
+                        </div>
+
+                        <div class="skill-box">
+
+                            <img src="images/json.png" class="skill-img">
+
+                        </div>
+
+                        <div class="skill-box">
+
+                            <img src="images/tkinter.png" class="skill-img">
+
+                        </div>
+
+                        <div class="skill-box">
+
+                            <img src="images/PostgreSQL.png" class="skill-img">
+
+                        </div>
+                        <div class="skill-box">
+
+                            <img src="images/Flutter.png" class="skill-img">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
         <section id="projects">projects</section>
 
     </main>
@@ -91,25 +194,58 @@
 
     <script>
 
-const circle =
-document.querySelector(".bg-circle")
+        /* HOME BG */
 
-document.addEventListener(
-"mousemove",
+        const circle =
+            document.querySelector(".bg-circle")
 
-(e)=>{
+        document.addEventListener(
 
-circle.style.left =
-e.clientX+"px"
+            "mousemove",
 
-circle.style.top =
-e.clientY+"px"
+            (e) => {
 
-}
+                circle.style.left =
+                    e.clientX + "px"
 
-)
+                circle.style.top =
+                    e.clientY + "px"
 
-</script>
+            })
+
+
+        /* SKILL BG */
+
+
+
+
+        const circle1 = document.querySelector(".skill-bg-circle");
+
+        const circle2 = document.querySelector(".skill-bg-circle2");
+
+        const skills = document.querySelector("#skills");
+
+        skills.addEventListener("mousemove", (e) => {
+
+            const rect = skills.getBoundingClientRect();
+
+            const x = e.clientX - rect.left;
+
+            const y = e.clientY - rect.top;
+
+            circle1.style.left = x + "px";
+
+            circle1.style.top = y + "px";
+
+            circle2.style.left = (x - 120) + "px";
+
+            circle2.style.top = (y - 120) + "px";
+
+        });
+
+
+
+    </script>
 </body>
 
 </html>

@@ -116,6 +116,8 @@ main {
 section {
 
     padding: 25px;
+    margin: 15px;
+    min-height: 100vh;
 
 }
 
@@ -183,6 +185,29 @@ section {
     border-radius: 50%;
 
     margin: 0;
+    animation: float 3s ease-in-out infinite;
+
+}
+
+@keyframes float {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-20px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
 
 }
 
@@ -190,10 +215,10 @@ section {
 /* TEXT */
 
 #home h1 {
-
+    margin-top: 0;
     font-size: 60px;
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     color: white;
 
@@ -203,7 +228,7 @@ section {
 
     font-size: 35px;
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     color: black;
 
@@ -217,7 +242,7 @@ section {
 
     font-size: 18px;
 
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
     line-height: 1.6;
 
@@ -260,7 +285,6 @@ section {
     display: inline-block;
 
     width: 0;
-
     animation:
 
         typing 3s steps(15) forwards,
@@ -269,31 +293,53 @@ section {
 
 }
 
+
 @keyframes typing {
-
     from {
-
         width: 0;
-
     }
-
     to {
-
-        width: 100%;
-
+        width: 15ch;
     }
-
 }
 
 @keyframes blink {
-
     50% {
-
         border-color: transparent;
-
     }
+}
+
+
+.skill-typing {
+
+    color: purple;
+
+    border-right: 3px solid;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    display: inline-block;
+
+    width: 0;
+
+    animation:
+
+        typingskill 3s steps(15) forwards,
+
+        blink .8s step-end infinite;
 
 }
+@keyframes typingskill {
+    from {
+        width: 0;
+    }
+    to {
+        width: 5ch;
+    }
+}
+
 
 
 /* BUTTONS */
@@ -321,7 +367,7 @@ section {
 
     height: 300px;
 
-    background: rgb(60, 98, 250);
+    background: rgb(63, 63, 255);
 
     border-radius: 50%;
 
@@ -341,6 +387,175 @@ section {
 
 }
 
+
+
+#skills {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+
+    padding: 40px;
+
+
+}
+
+/* Heading */
+
+.skill-title {
+    color: white;
+    font-size: 50px;
+
+    margin-bottom: 40px;
+
+    margin-left: 40px;
+
+}
+
+/* IMAGE + GRID CONTAINER */
+
+
+.skills-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 60px;
+
+}
+
+.left-side {
+
+    flex: 1;
+
+}
+
+.skill-title {
+
+    font-size: 50px;
+
+    margin-bottom: 30px;
+
+}
+
+.skill-image img {
+    margin-top: 20px;
+    width: 550px;
+
+    height: auto;
+
+}
+
+.skills-right {
+
+    flex: 1;
+
+}
+
+.skill-grid {
+
+    display: grid;
+
+    grid-template-columns:
+
+        repeat(4, 100px);
+
+    gap: 20px;
+
+    justify-content: center;
+
+}
+
+.skill-box {
+
+    width: 100px;
+
+    height: 100px;
+
+    background: #eee;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+.skill-box:hover{
+
+animation: cardMove .5s forwards;
+
+}
+
+@keyframes cardMove{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:
+
+translateY(-10px)
+
+scale(1.1);
+
+}
+
+}
+
+.skill-img {
+
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: contain;
+
+}
+
+/* SKILL BACKGROUND CIRCLES */
+.skill-bg-circle,
+.skill-bg-circle2 {
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    pointer-events: none;
+
+    opacity: .18;
+
+    z-index: 0;
+
+    transition: .08s linear;
+
+}
+
+.skill-bg-circle {
+
+    background: rgb(56, 56, 254);
+
+}
+
+.skill-bg-circle2 {
+
+    background: rgb(255, 62, 255);
+
+}
 
 /* FOOTER */
 
@@ -443,4 +658,45 @@ footer {
 
     }
 
+    .skills-content {
+
+        flex-direction: column;
+
+    }
+
+    .skill-title {
+
+        text-align: center;
+
+    }
+
+    .skill-image {
+
+        display: flex;
+
+        justify-content: center;
+
+    }
+
+    .skill-image img {
+
+        width: 220px;
+
+    }
+
+    .skill-grid {
+
+        grid-template-columns:
+
+            repeat(3, 80px);
+
+    }
+
+    .skill-box {
+
+        width: 80px;
+
+        height: 80px;
+
+    }
 }
