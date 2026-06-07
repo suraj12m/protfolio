@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ꕶนℜ₳ℑ 𝔓𝔯𝔬𝔱𝔣𝔬𝔩𝔦𝔬</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -18,7 +19,8 @@
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#achievement">Achievement</a>
-            <!-- <a href="#">Connect</a> -->
+            <a href="#contact">Contact</a>
+
         </nav>
     </header>
     <main>
@@ -907,6 +909,226 @@
 
         </section>
 
+        <section id="contact">
+
+            <div class="contact-bg-circle"></div>
+            <div class="contact-bg-circle2"></div>
+
+            <div class="contact-container">
+
+                <!-- LEFT SIDE -->
+
+                <div class="contact-left">
+
+                    <div class="contact-badge">
+                        📞 LET'S CONNECT
+                    </div>
+
+                    <h1>
+                        Contact <span>Me</span>
+                    </h1>
+
+                    <p class="contact-desc">
+
+                        I'm always open to internships,
+                        collaborations, project discussions,
+                        and new opportunities.
+
+                        Feel free to connect with me! 🚀
+
+                    </p>
+
+                    <div class="contact-grid">
+
+                        <!-- GitHub -->
+
+                        <a href="https://github.com/suraj12m" target="_blank" class="contact-card">
+
+                            <i class="fa-brands fa-github"></i>
+
+                            <div class="contact-info">
+
+                                <h3>GitHub</h3>
+
+                                <p>suraj12m</p>
+
+                                <span>
+                                    Check out my repositories
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+
+                        </a>
+
+
+                        <!-- LinkedIn -->
+
+                        <a href="https://www.linkedin.com/in/suraj-mandal-7b41b037b?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                            class="contact-card">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                            <div class="contact-info">
+
+                                <h3>LinkedIn</h3>
+
+                                <p>Suraj Mandal</p>
+
+                                <span>
+                                    Let's connect professionally
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+
+                        </a>
+
+
+                        <!-- Email -->
+
+                        <a href="mailto:yourmail@gmail.com" class="contact-card">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <div class="contact-info">
+
+                                <h3>Email</h3>
+
+                                <p>shikhatman123@gmail.com</p>
+
+                                <span>
+                                    Drop me an email anytime
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+
+                        </a>
+
+
+                        <!-- Instagram -->
+
+                        <a href="https://www.instagram.com/s__u_._r__a__j?igsh=aHFvbnVjaWtqNnlk" class="contact-card">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                            <div class="contact-info">
+
+                                <h3>Instagram</h3>
+
+                                <p>@suraj_mandal</p>
+
+                                <span>
+                                    See my updates & more
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+
+                        </a>
+
+                    </div>
+
+                    <!-- LOCATION CARD -->
+
+                    <div class="location-card">
+
+                        <div class="location-left">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <div>
+
+                                <h3>Location</h3>
+
+                                <p>
+                                    BIT Sindri, Dhanbad,
+                                    Jharkhand, India
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <img src="images/building.png" class="building-img">
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+
+                <div class="contact-right">
+
+
+
+
+
+                    <form class="feedback-form" id="contact-form" action="https://formsubmit.co/shikhatman123@gmail.com"
+                        method="POST">
+
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <h2>
+
+                            <i class="fa-regular fa-message"></i>
+
+                            Send Me a Feedback
+
+                        </h2>
+
+                        <input type="text" name="name" placeholder="Your Name" required>
+
+                        <input type="email" name="email" placeholder="Your Email" required>
+
+                        <input type="text" name="subject" placeholder="Subject" required>
+
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+
+                        <button type="submit">
+
+                            <i class="fa-regular fa-paper-plane"></i>
+
+                            Send Feedback
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- PAPER PLANE -->
+
+            <img src="images/paper-plane.png" class="paper-plane">
+
+
+            <!-- QUOTE -->
+
+            <div class="contact-quote">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+                Let's connect and create
+                something <span>amazing</span>
+                together!
+
+            </div>
+
+
+            <!-- HACKER IMAGE -->
+
+            <img src="images/contact-hacker.png" class="contact-hacker">
+
+        </section>
+
     </main>
     <hr>
     <footer>
@@ -1149,6 +1371,50 @@
             document.querySelector(".right-arrow");
 
 
+
+        /* ===== AUTO CERTIFICATE SLIDER ===== */
+
+        let certificateAuto = true;
+
+        function autoCertificateSlide() {
+
+            if (certificateAuto) {
+
+                certificateSlider.scrollLeft += 1;
+
+                if (
+                    certificateSlider.scrollLeft >=
+                    certificateSlider.scrollWidth -
+                    certificateSlider.clientWidth
+                ) {
+
+                    certificateSlider.scrollLeft = 0;
+
+                }
+            }
+
+            requestAnimationFrame(autoCertificateSlide);
+        }
+
+        autoCertificateSlide();
+
+        certificateSlider.addEventListener("mouseenter", () => {
+            certificateAuto = false;
+        });
+
+        certificateSlider.addEventListener("mouseleave", () => {
+            certificateAuto = true;
+        });
+
+        certificateSlider.addEventListener("touchstart", () => {
+            certificateAuto = false;
+        });
+
+        certificateSlider.addEventListener("touchend", () => {
+            certificateAuto = true;
+        });
+
+
         /* Arrow Buttons */
 
         rightArrow.addEventListener("click", () => {
@@ -1344,6 +1610,63 @@
                     `translate(${x - 300}px,${y - 300}px)`;
 
             });
+
+
+        // contact
+
+
+
+        const contact =
+            document.querySelector("#contact");
+
+        const c1 =
+            document.querySelector(".contact-bg-circle");
+
+        const c2 =
+            document.querySelector(".contact-bg-circle2");
+
+        contact.addEventListener(
+
+            "mousemove",
+
+            (e) => {
+
+                const rect =
+                    contact.getBoundingClientRect();
+
+                const x =
+                    e.clientX - rect.left;
+
+                const y =
+                    e.clientY - rect.top;
+
+                c1.style.transform =
+                    `translate(${x - 70}px,${y - 70}px)`;
+
+                c2.style.transform =
+                    `translate(${x - 300}px,${y - 300}px)`;
+
+            });
+
+
+        const form =
+            document.getElementById(
+                "contact-form"
+            );
+
+        form.addEventListener(
+            "submit",
+            function () {
+
+                alert(
+                    "🚀 Feedback Submitted Successfully!"
+                );
+
+            });
+
+
+
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js">
