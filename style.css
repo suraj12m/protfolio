@@ -141,6 +141,7 @@ section {
 
 #home {
 
+    background: rgb(6, 1, 62);
     position: relative;
 
     overflow: hidden;
@@ -159,10 +160,37 @@ section {
 
 }
 
+#tube-canvas {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+}
+
+
+
+.bg-circle,
+.bg-circle2 {
+
+    display: none;
+
+}
 
 /* LEFT */
 
 .left {
+    position: relative;
 
     flex: 1;
 
@@ -176,6 +204,7 @@ section {
 /* RIGHT */
 
 .right {
+    position: relative;
 
     flex: 1;
 
@@ -245,11 +274,11 @@ section {
 
     margin-bottom: 15px;
 
-    color: rgb(225, 212, 212);
+    color: white;
 
-    opacity: .1;
+    /* opacity: .1;
 
-    transition: .5s;
+    transition: .5s; */
 
 }
 
@@ -263,17 +292,17 @@ section {
 
     max-width: 600px;
 
-    color: rgb(225, 212, 212);
+    color: white;
 
-    opacity: .1;
+    /* opacity: .1;
 
-    transition: .5s;
+    transition: .5s; */
 
 }
 
 
 /* HOVER EFFECT */
-
+/* 
 #home h2:hover,
 
 #home p:hover {
@@ -282,7 +311,7 @@ section {
 
     opacity: 1;
 
-}
+} */
 
 
 /* TYPING */
@@ -1840,11 +1869,12 @@ footer {
         height: 80px;
 
     }
-    .skill-typing{
+
+    .skill-typing {
         transform: translateX(-28px);
     }
 
-        .binary-bg {
+    .binary-bg {
 
         font-size: 16px;
 
@@ -1926,12 +1956,13 @@ footer {
 
     }
 
-    #crt{
+    #crt {
         display: block;
         margin-top: 10px;
         font-size: 50px;
-       transform: translateX(-30px);
+        transform: translateX(-30px);
     }
+
     /* Heading */
 
     .certificate-text h1 {
@@ -2044,4 +2075,5 @@ footer {
     .head-image img {
         max-width: 260px;
     }
+
 }

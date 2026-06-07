@@ -24,9 +24,9 @@
     <main>
 
         <section id="home">
-            <div class="bg-circle"></div>
-
-            <div class="bg-circle2"></div>
+            <canvas id="tube-canvas"></canvas>
+            <!-- <div class="bg-circle"></div>
+            <div class="bg-circle2"></div> -->
             <div class="left">
 
                 <h1>
@@ -803,7 +803,7 @@
                         <h2>ECWoC</h2>
 
                         <h3>ELITE CODERS</h3>
-                        
+
                         <!-- <a href="#">
 
                             ↗ View Certificate
@@ -917,42 +917,43 @@
 
         /* HOME BG */
 
-        const homeCircle1 =
-            document.querySelector(".bg-circle");
+        // const homeCircle1 =
+        //     document.querySelector(".bg-circle");
 
-        const homeCircle2 =
-            document.querySelector(".bg-circle2");
+        // const homeCircle2 =
+        //     document.querySelector(".bg-circle2");
 
         const home =
             document.querySelector("#home");
 
 
-        home.addEventListener(
+        // home.addEventListener(
 
-            "mousemove",
+        //     "mousemove",
 
-            (e) => {
+        //     (e) => {
 
-                const rect =
-                    home.getBoundingClientRect();
+        //         const rect =
+        //             home.getBoundingClientRect();
 
-                const x =
-                    e.clientX - rect.left;
+        //         const x =
+        //             e.clientX - rect.left;
 
-                const y =
-                    e.clientY - rect.top;
-
-
-                homeCircle1.style.transform =
-
-                    `translate(${x - 150}px,${y - 150}px)`;
+        //         const y =
+        //             e.clientY - rect.top;
 
 
-                homeCircle2.style.transform =
+        //         homeCircle1.style.transform =
 
-                    `translate(${x - 250}px,${y - 250}px)`;
+        //             `translate(${x - 150}px,${y - 150}px)`;
 
-            });
+
+        //         homeCircle2.style.transform =
+
+        //             `translate(${x - 250}px,${y - 250}px)`;
+
+        //     });
+
 
 
 
@@ -1344,6 +1345,107 @@
 
             });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js">
+    </script>
+
+    <script>
+        const canvas =
+            document.getElementById(
+                "tube-canvas"
+            );
+
+        (async () => {
+
+            const module =
+                await import(
+
+                    "https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js"
+
+                );
+
+            const TubesCursor =
+                module.default;
+
+            const app =
+
+                TubesCursor(
+
+                    canvas,
+
+                    {
+
+                        tubes: {
+
+                            colors: [
+
+                                "#f967fb",
+
+                                "#53bc28",
+
+                                "#6958d5"
+
+                            ],
+
+                            lights: {
+
+                                intensity: 200,
+
+                                colors: [
+
+                                    "#83f36e",
+
+                                    "#fe8a2e",
+
+                                    "#ff008a",
+
+                                    "#60aed5"
+
+                                ]
+
+                            }
+
+                        }
+
+                    }
+
+                );
+
+            home.addEventListener(
+
+                "click",
+
+                () => {
+
+                    app.tubes.setColors([
+
+                        "#" + Math.floor(
+
+                            Math.random() * 16777215
+
+                        ).toString(16),
+
+                        "#" + Math.floor(
+
+                            Math.random() * 16777215
+
+                        ).toString(16),
+
+                        "#" + Math.floor(
+
+                            Math.random() * 16777215
+
+                        ).toString(16)
+
+                    ]);
+
+                }
+
+            );
+
+        })();
+    </script>
+
 </body>
 
 </html>
