@@ -1,3 +1,2 @@
-# protfolio
-Welcome to my Protfolio
-Not completed yet pls wait
+# portfolio
+Welcome to my Portfolio
