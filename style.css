@@ -1791,7 +1791,7 @@ section {
 
 /* CARD */
 
-.contact-card {
+/* .contact-card {
     display: flex;
     align-items: center;
     gap: 18px;
@@ -1814,6 +1814,84 @@ section {
 .contact-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 0 25px rgba(0, 229, 255, .25);
+
+} */
+
+.contact-card {
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    text-decoration: none;
+    color: white;
+
+    padding: 25px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, .03);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(15px);
+
+    transition: .4s;
+
+}
+
+/* Neon Border Layer */
+
+.contact-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 1.5px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(130deg,
+            #00e5ff,
+            transparent,
+            #a000ff,
+            transparent,
+            #00e5ff);
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask-composite: exclude;
+
+    opacity: .6;
+
+}
+
+/* Hover */
+
+.contact-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 20px rgba(0, 229, 255, .25),
+        0 0 40px rgba(160, 0, 255, .2);
+
+}
+
+.contact-card:hover::before {
+
+    opacity: 1;
+
 }
 
 .contact-card i:first-child {
@@ -1844,23 +1922,36 @@ section {
 /* LOCATION */
 
 .location-card {
+
     margin-top: 15px;
+
     height: 90px;
-    overflow: hidden;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     padding: 8px 20px;
 
-    min-height: 70px;
-
     border-radius: 14px;
 
-    background: rgba(255, 255, 255, .03);
-    border: 1px solid rgba(255, 255, 255, .08);
-    max-width: 640px;
+    background:
+        linear-gradient(#050505, #050505),
+        linear-gradient(130deg,
+            #00e5ff,
+            #a000ff,
+            #00e5ff);
+
+    background-origin: border-box;
+
+    background-clip:
+        padding-box,
+        border-box;
+
+    border: 1.5px solid transparent;
+
 }
 
 .location-left {
@@ -1898,16 +1989,50 @@ section {
 }
 
 .feedback-form {
-    background:
-        rgba(255, 255, 255, .03);
 
-    border:
-        1px solid rgba(255, 255, 255, .08);
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background: #050505;
 
     backdrop-filter: blur(20px);
 
-    padding: 35px;
+}
+
+.feedback-form::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
     border-radius: 25px;
+
+    padding: 1.5px;
+
+    background:
+        linear-gradient(130deg,
+            #00e5ff,
+            #a000ff,
+            #00e5ff);
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    pointer-events: none;
+
 }
 
 .feedback-form h2 {
@@ -1990,22 +2115,33 @@ section {
 
     margin: 60px auto 0;
 
-    color: white;
-
     padding: 20px 40px;
 
     border-radius: 20px;
 
-    background:
-        rgba(255, 255, 255, .03);
+    color: white;
 
-    border:
-        1px solid rgba(255, 255, 255, .08);
+    background:
+        linear-gradient(#050505, #050505),
+        linear-gradient(130deg,
+            #00e5ff,
+            #a000ff,
+            #00e5ff);
+
+    background-origin: border-box;
+
+    background-clip:
+        padding-box,
+        border-box;
+
+    border: 1.5px solid transparent;
 
     font-size: 24px;
 
     position: relative;
+
     z-index: 2;
+
 }
 
 .contact-quote i {
@@ -2046,13 +2182,13 @@ section {
 
 .contact-bg-circle {
     background: #00e5ff;
-    
+
 
 }
 
 .contact-bg-circle2 {
     background: #a000ff;
-   
+
 
 }
 
@@ -2083,21 +2219,32 @@ footer {
 @media(max-width:768px) {
 
     header {
-
+        display: flex;
         flex-direction: column;
-
-        gap: 20px;
-
-        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 15px;
 
     }
 
+    .logo {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
     nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 5px;
 
-        justify-content: center;
+    }
 
-        gap: 25px;
-
+    nav a {
+        font-size: 12px;
     }
 
     #home {
@@ -2123,6 +2270,8 @@ footer {
         min-width: auto;
 
     }
+
+
 
     .right {
 
@@ -2403,9 +2552,45 @@ footer {
         max-width: 260px;
     }
 
+    /* contact  */
+    .contact-card {
+
+        padding: 18px;
+
+        min-height: 95px;
+
+        border-radius: 18px;
+
+    }
+
+    .contact-card i:first-child {
+
+        font-size: 42px;
+
+    }
+
+    .contact-info h3 {
+
+        font-size: 18px;
+
+    }
+
+    .contact-info p {
+
+        font-size: 14px;
+
+    }
+
+    .contact-info span {
+
+        font-size: 12px;
+
+    }
+
     .contact-container {
         flex-direction: column;
     }
+
 
     .contact-left h1 {
         font-size: 55px;
@@ -2428,17 +2613,61 @@ footer {
     }
 
     .location-card {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
+
+        height: auto;
+
+        padding: 12px;
+
+        min-height: 60px;
+
+        gap: 10px;
+        overflow: hidden;
+        position: relative;
+
+    }
+
+    .location-left {
+
+        gap: 12px;
+
+    }
+
+    .location-left i {
+
+        font-size: 28px;
+
+    }
+
+    .location-left h3 {
+
+        font-size: 16px;
+
+    }
+
+    .location-left p {
+
+        font-size: 12px;
+
     }
 
     .building-img {
-        width: 150px;
+
+        display: none;
+
     }
 
     .feedback-form {
         margin-top: 20px;
+    }
+
+    .feedback-form h2 {
+        font-size: 20px;
+    }
+
+    .feedback-form button {
+        padding: 10px;
+        font-size: 25px;
+
     }
 
     .paper-plane {
@@ -2451,8 +2680,8 @@ footer {
 
     .contact-quote {
         width: 100%;
-        font-size: 18px;
+        font-size: 15px;
         text-align: center;
-        padding: 20px;
+        padding: 15px;
     }
 }
